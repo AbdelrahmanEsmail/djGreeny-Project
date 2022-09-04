@@ -5,11 +5,11 @@ from django.utils import timezone
 from taggit.managers import TaggableManager
 
 
-# FLAG_OPTION = (
-#     ('New', 'New'),
-#     ('Feature', 'Feature'),
-#     ('Sale', 'Sale'),
-# )
+FLAG_OPTION = (
+    ('New', 'New'),
+    ('Feature', 'Feature'),
+    ('Sale', 'Sale'),
+)
 
 
 class Product(models.Model):
@@ -18,7 +18,7 @@ class Product(models.Model):
     sku = models.IntegerField(_("SKU"))
     desc = models.TextField(_("Description"), max_length=1000)
     price = models.FloatField(_("Price"))
-    # flag = models.CharField(_("Flag"), max_length=10, choice=FLAG_OPTION)
+    flag = models.CharField(_("Flag"), max_length=10, choices=FLAG_OPTION)
     quantity = models.IntegerField(_("Quantity"))
     brand = models.ForeignKey('Brand', related_name='product_brand',
                               on_delete=models.SET_NULL, null=True, blank=True)
