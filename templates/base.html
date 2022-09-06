@@ -158,7 +158,7 @@
             <div class="navbar-content">
               <ul class="navbar-list">
                 <li class="navbar-item dropdown">
-                  <a class="navbar-link" href="#">Products</a>
+                  <a class="navbar-link" href="{% url 'products:product_list' %}">Products</a>
                 </li>
 
                 <li class="navbar-item dropdown-megamenu">
@@ -296,7 +296,7 @@
                 <li class="navbar-item dropdown">
                   <a class="navbar-link " href="#">Orders</a>
                 </li>
-                
+
               </ul>
               <div class="navbar-info-group">
                 <div class="navbar-info">
@@ -1245,6 +1245,9 @@
     <script src="{% static 'vendor/niceselect/nice-select.min.js' %}"></script>
     <script src="{% static 'vendor/slickslider/slick.min.js' %}"></script>
     <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope/isotope.pkgd.min.js' %}"></script>
+
+
 
     <!-- CUSTOM -->
     <script src="{% static 'js/nice-select.js' %}"></script>
@@ -1252,6 +1255,7 @@
     <script src="{% static 'js/accordion.js' %}"></script>
     <script src="{% static 'js/venobox.js' %}"></script>
     <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
     <!--=====================================
                     JS LINK PART END
