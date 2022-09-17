@@ -3,6 +3,15 @@ from django.views.generic import ListView, DetailView
 from .models import Product, Brand, Category
 
 
+def product_list_test (request):
+    # products=Product.objects.filter(price=60)
+    products=Product.objects.select_related('category').all()
+    return render(request, 'products/product_list_test.html',{'products':products})
+
+
+
+
+
 class ProductList(ListView):
     model = Product
 
